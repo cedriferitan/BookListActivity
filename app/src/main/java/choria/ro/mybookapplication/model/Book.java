@@ -6,9 +6,10 @@ import org.json.JSONObject;
 
 import android.text.TextUtils;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Book {
+public class Book implements Serializable {
     private String openLibraryId;
     private String author;
     private String title;
