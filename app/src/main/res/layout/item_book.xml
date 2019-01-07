@@ -6,7 +6,7 @@
 
     <ImageView
         android:id="@+id/ivBookCover"
-        android:layout_width="56dp" android:contentDescription="TODO" 
+        android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_margin="8dp" />
 
@@ -15,20 +15,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:layout_toEndOf="@+id/ivBookCover"
         android:layout_toRightOf="@+id/ivBookCover"
-        android:text="@string/title"
-        android:textSize="24sp" />
+        android:text="Title"
+        android:textSize="24dp" />
 
     <TextView
         android:id="@+id/tvAuthor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTitle"
-        android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_toEndOf="@+id/ivBookCover"
         android:layout_toRightOf="@+id/ivBookCover"
-        android:text="@string/author"
-        android:textSize="12sp" />
+        android:layout_below="@+id/tvTitle"
+        android:text="Author"
+        android:textSize="12dp" />
 </RelativeLayout>

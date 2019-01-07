@@ -23,7 +23,10 @@ import java.util.ArrayList;
 import choria.ro.mybookapplication.adapter.BookAdapter;
 import choria.ro.mybookapplication.model.Book;
 import choria.ro.mybookapplication.rest.client.BookClient;
+
 import cz.msebera.android.httpclient.Header;
+
+import static choria.ro.mybookapplication.R.*;
 
 public class BookListActivity extends AppCompatActivity {
     public static final String BOOK_DETAIL_KEY = "book";
@@ -35,14 +38,14 @@ public class BookListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_book_list);
-        lvBooks = findViewById(R.id.lvBooks);
+        setContentView(layout.activity_book_list);
+        lvBooks = findViewById(id.lvBooks);
         ArrayList<Book> aBooks = new ArrayList<Book>();
         // initialize the adapter
         bookAdapter = new BookAdapter(this, aBooks);
         // attach the adapter to the ListView
         lvBooks.setAdapter(bookAdapter);
-        progress = (ProgressBar) findViewById(R.id.progress);
+        progress = (ProgressBar) findViewById(id.progress);
         setupBookSelectedListener();
     }
 
@@ -101,7 +104,7 @@ public class BookListActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_book_list, menu);
-        final MenuItem searchItem = menu.findItem(R.id.action_search);
+        final MenuItem searchItem = menu.findItem(id.action_search);
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

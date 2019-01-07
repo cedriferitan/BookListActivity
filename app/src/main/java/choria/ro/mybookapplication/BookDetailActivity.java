@@ -101,7 +101,7 @@ public class BookDetailActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_share) {
+        if (id == R.id.action_search) {
             setShareIntent();
             return true;
         }
